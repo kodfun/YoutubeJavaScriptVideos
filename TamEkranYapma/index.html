@@ -1,0 +1,27 @@
+<style>
+  h1 {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<h1>KodFun</h1>
+<img id="img" src="cat.jpg" alt="kedi" width="200">
+
+<hr>
+
+<button id="btn">Tam Ekran Yap</button>
+<button id="btn2">Başlığı Tam Ekran Yap</button>
+
+<script>
+  const img = document.getElementById("img");
+  const btn = document.getElementById("btn");
+  const btn2 = document.getElementById("btn2");
+
+  btn.onclick = () => img.requestFullscreen();
+  img.ondblclick = () => document.exitFullscreen();
+  btn2.onclick = () => document.querySelector("h1")
+    .requestFullscreen();
+</script>
